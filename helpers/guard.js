@@ -6,10 +6,12 @@ const guard = (req, res, next) => {
       ? req.headers.authorization.split(" ")[1]
       : null;
 
+
     if (err || !user || token !== user.token) {
       return res.status(401).json({
         status: "error",
         code: 401,
+
         message: "Unauthorized",
       });
     }
