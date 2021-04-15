@@ -57,6 +57,7 @@ const contactSchema = new Schema(
 
 contactSchema.plugin(mongoosePaginate);
 
+// eslint-disable-next-line new-cap
 const Contact = new model("contact", contactSchema);
 
 module.exports = Contact;
